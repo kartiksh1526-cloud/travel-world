@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Explore India's most beautiful destinations with curated travel guides and holiday packages.">
+  <title>Travel World — Discover India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/details.css">
+</head>
+
+<body id="top">
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">TW</span><span>TRAVEL
+        WORLD<small>JOURNEYS • CULTURE • DISCOVERY</small></span></a>
+    <nav id="nav"><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#about">About</a><a
+        class="nav-cta" href="#contact">Plan my trip ↗</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="nav" aria-expanded="false">☰</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content"><span class="eyebrow">YOUR JOURNEY BEGINS HERE</span>
+        <h1>Find your next<br><em>beautiful somewhere.</em></h1>
+        <p>From Himalayan mornings to golden beaches — discover the India you’ve been dreaming of.</p><a
+          class="btn btn-light" href="#destinations">Explore destinations <span>→</span></a>
+      </div>
+      <div class="hero-note">01 / INCREDIBLE INDIA</div>
+    </section>
+    <section class="intro section-wrap">
+      <div><span class="eyebrow dark">TRAVEL, YOUR WAY</span>
+        <h2>Every place has<br>a story to tell.</h2>
+      </div>
+      <p>Find inspiration, read our destination guides and choose a trip that feels like you. Thoughtfully curated
+        journeys, local experiences and memories that stay long after you return.</p>
+    </section>
+    <section class="destinations section-wrap" id="destinations">
+      <div class="section-heading">
+        <div><span class="eyebrow dark">THE DESTINATIONS</span>
+          <h2>Where will you go?</h2>
+        </div>
+        <p>Handpicked places across India, waiting to be explored.</p>
+      </div>
+      <div class="filters" id="filters"><button class="filter active" data-filter="all">All places</button><button
+          class="filter" data-filter="mountain">Mountains</button><button class="filter"
+          data-filter="beach">Beaches</button><button class="filter" data-filter="heritage">Heritage</button><button
+          class="filter" data-filter="nature">Nature</button></div>
+      <div class="destination-grid" id="destinationGrid"></div>
+    </section>
+    <section class="quote-band">
+      <div class="quote-mark">“</div>
+      <p>We travel not to escape life,<br>but for life not to escape us.</p><span>— ROBIN YOUNG</span>
+    </section>
+    <section class="packages section-wrap" id="packages">
+      <div class="section-heading">
+        <div><span class="eyebrow dark">CURATED GETAWAYS</span>
+          <h2>Trips worth taking.</h2>
+        </div>
+        <p>Explore sample day-by-day routes, possible inclusions and exclusions before enquiring. Prices are indicative,
+          per person; the final quote depends on dates, travellers, hotel category and confirmed services.</p>
+      </div>
+      <div class="package-grid" id="packageGrid"></div>
+      <p class="package-disclaimer">These are planning examples, not confirmed bookings. Hotels, meals, transfers,
+        tickets and activities are included only when itemised in your written quote. Flights and trains are not
+        included unless explicitly stated.</p>
+    </section>
+    <section class="about section-wrap" id="about">
+      <div class="about-image"></div>
+      <div class="about-copy"><span class="eyebrow dark">A LITTLE ABOUT US</span>
+        <h2>More than a trip.<br><em>A feeling.</em></h2>
+        <p>Travel World is your inspiration hub for discovering India. Browse destination stories, get practical travel
+          tips and explore sample itineraries before you plan your next escape.</p>
+        <ul>
+          <li>✦ Destination guides with useful local tips</li>
+          <li>✦ Curated itineraries for different travel styles</li>
+          <li>✦ Easy enquiry for your customised holiday</li>
+        </ul><a class="text-link" href="#contact">Let's plan something beautiful ↗</a>
+      </div>
+    </section>
+    <section class="contact section-wrap" id="contact">
+      <div><span class="eyebrow dark">LET'S MAKE IT HAPPEN</span>
+        <h2>Your next story<br>starts with a hello.</h2>
+        <p>Tell us where you want to go. We’ll help you shape the journey.</p>
+      </div>
+      <form id="enquiryForm" class="contact-form"><label>Your name<input name="name" required autocomplete="name"
+            placeholder="Enter your name"></label><label>Email or phone<input name="contact" required
+            autocomplete="email" placeholder="How can we reach you?"></label><label>Destination<select
+            name="destination" id="destinationSelect">
+            <option value="">Choose a destination</option>
+          </select></label><label>Message<textarea name="message" rows="3"
+            placeholder="Travel dates, number of people, budget..."></textarea></label><button class="btn btn-dark"
+          type="submit">Prepare enquiry ↗</button><small id="formMessage" aria-live="polite">Your enquiry will open in
+          WhatsApp/email when configured, or download as a text file.</small></form>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><div class="footer-branding"><a class="brand footer-brand" href="#"><span class="brand-mark">TW</span><span>TRAVEL WORLD<small>JOURNEYS • CULTURE • DISCOVERY</small></span></a><p>Planning a memorable Indian getaway should feel inspiring, clear and easy. We help curious travellers discover places, routes and experiences worth taking the long way to see.</p></div><div class="footer-links"><div><span class="footer-title">Explore</span><a href="#destinations">Destinations</a><a href="#packages">Packages</a><a href="#about">Why Travel World</a></div><div><span class="footer-title">Quick links</span><a href="#contact">Plan my trip</a><a href="#">Travel tips</a><a href="#">Faqs</a></div></div><div class="footer-contact"><span class="footer-title">Plan your trip</span><a href="mailto:hello@travelworld.in">hello@travelworld.in</a><a href="tel:+919876543210">+91 98765 43210</a><span>Mon–Sat · 9:00 AM to 7:00 PM</span></div></div><div class="footer-bottom"><span>Made for curious travellers. © 2026 Travel World</span><div class="footer-meta"><a href="#">Privacy</a><a href="#">Terms</a></div><a class="back-link" href="#top">Back to top ↑</a></div></footer>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

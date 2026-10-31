@@ -1,0 +1,395 @@
+.package-details {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 14px;
+}
+
+.brand-mark {
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.package-details summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.package-details summary:hover,
+.package-details summary:focus-visible {
+  color: var(--orange);
+}
+
+.package-details h4,
+.article-side h4 {
+  font-size: 12px;
+  margin: 18px 0 8px;
+}
+
+.package-details ol,
+.package-details ul,
+.package-points {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+  padding-left: 18px;
+}
+
+.package-details li + li,
+.package-points li + li {
+  margin-top: 6px;
+}
+
+.package-note,
+.package-disclaimer {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.article-media {
+  margin: 28px 0 42px;
+}
+
+.article-media-card {
+  background: #fff;
+  margin: 0;
+  min-width: 0;
+  max-width: 680px;
+}
+
+.article-media-card video {
+  aspect-ratio: 16 / 10;
+  background: #172b2a;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-media-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 14px;
+}
+
+.article-media-card figcaption strong {
+  font-size: 12px;
+}
+
+.article-media-card figcaption span,
+.article-media-card figcaption a {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.article-media-card figcaption a:hover {
+  color: var(--orange);
+}
+
+.guide-overview {
+  background: #e9eee7;
+  margin: 28px 0;
+  padding: 22px;
+}
+
+.guide-overview > p,
+.section-intro {
+  margin: 10px 0 18px;
+}
+
+.overview-facts {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.overview-facts > div {
+  background: #fff;
+  min-width: 0;
+  padding: 13px;
+}
+
+.overview-facts strong,
+.overview-facts span {
+  display: block;
+}
+
+.overview-facts strong {
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.overview-facts span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.guide-topics {
+  margin-top: 40px;
+}
+
+.guide-topics > h2,
+.place-details > h2,
+.place-background > h2,
+.long-read-section > h2 {
+  margin: 10px 0;
+}
+
+.section-intro {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.illustrated-topic {
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "text image";
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.8fr);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.illustrated-topic.topic-reversed {
+  grid-template-areas: "image text";
+}
+
+.topic-copy {
+  grid-area: text;
+  padding: 23px 0 23px 23px;
+}
+
+.topic-reversed .topic-copy {
+  padding: 23px 23px 23px 0;
+}
+
+.topic-kicker {
+  color: var(--orange);
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 9px;
+}
+
+.topic-copy h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.topic-copy p {
+  margin: 0;
+}
+
+.topic-photo {
+  align-self: stretch;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  grid-area: image;
+  margin: 0;
+  min-width: 0;
+}
+
+.topic-photo img {
+  aspect-ratio: 4 / 3;
+  background: #e6e3da;
+  display: block;
+  flex: 1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.topic-photo figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 9px 12px;
+}
+
+.topic-photo figcaption strong {
+  font-size: 10px;
+}
+
+.topic-photo figcaption span,
+.topic-photo figcaption a {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.topic-photo figcaption a:hover {
+  color: var(--orange);
+}
+
+.package-note {
+  background: var(--cream);
+  margin: 14px 0 0;
+  padding: 12px;
+}
+
+.package-disclaimer {
+  margin: 24px 0 0;
+  max-width: 760px;
+}
+
+.itinerary-section,
+.planning-section,
+.place-details,
+.place-background,
+.long-read-section {
+  margin-top: 46px;
+}
+
+.itinerary-section > h2,
+.planning-section > h2,
+.place-details > h2,
+.place-background > h2,
+.long-read-section > h2 {
+  margin-top: 12px;
+}
+
+.place-details h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 30px 0 8px;
+}
+
+.place-details p {
+  margin: 0 0 16px;
+}
+
+.place-background h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.place-background p {
+  margin: 0 0 16px;
+}
+
+.background-intro {
+  margin: 0 0 28px !important;
+}
+
+.background-chapter {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 42px minmax(0, 1fr);
+  padding: 22px 0 6px;
+}
+
+.long-read-chapter {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 42px minmax(0, 1fr);
+  padding: 22px 0 6px;
+}
+
+.long-read-chapter h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.long-read-chapter p {
+  margin: 0 0 16px;
+}
+
+.chapter-number {
+  color: var(--orange);
+  font: 600 13px "DM Sans", sans-serif;
+  letter-spacing: 1px;
+  padding-top: 4px;
+}
+
+.itinerary-list {
+  border-left: 1px solid #d6ddd4;
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0 0 0 22px;
+}
+
+.itinerary-list li {
+  padding: 0 0 22px;
+  position: relative;
+}
+
+.itinerary-list li::before {
+  background: var(--orange);
+  border: 3px solid var(--cream);
+  border-radius: 50%;
+  content: "";
+  height: 9px;
+  left: -29px;
+  position: absolute;
+  top: 3px;
+  width: 9px;
+}
+
+.itinerary-list strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.itinerary-list p {
+  margin: 7px 0 0;
+}
+
+.article-side .package-points {
+  margin: 0 0 18px;
+}
+
+.article-side .btn + p {
+  margin-top: 18px;
+}
+
+@media (max-width: 620px) {
+  .overview-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .illustrated-topic,
+  .illustrated-topic.topic-reversed {
+    gap: 0;
+    grid-template-areas:
+      "text"
+      "image";
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .topic-copy,
+  .topic-reversed .topic-copy {
+    padding: 18px;
+  }
+
+  .topic-photo img {
+    aspect-ratio: 16 / 10;
+    flex: none;
+  }
+
+  .package-details ol,
+  .package-details ul {
+    font-size: 12px;
+  }
+
+  .background-chapter {
+    gap: 12px;
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .long-read-chapter {
+    gap: 12px;
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+}
