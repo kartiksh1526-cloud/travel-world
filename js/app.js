@@ -28,6 +28,7 @@ function renderDestinations(filter = "all") {
         </a>`,
     )
     .join("");
+  window.initScrollAnimations?.(grid);
 }
 
 renderDestinations();
@@ -122,6 +123,7 @@ packageGrid.innerHTML = packages
       </article>`,
   )
   .join("");
+window.initScrollAnimations?.(packageGrid);
 
 destinations.forEach((destination) => {
   const option = document.createElement("option");

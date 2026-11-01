@@ -1,40 +1,6 @@
 const id = new URLSearchParams(location.search).get("id");
 const destination = destinations.find((place) => place.id === id);
 const root = document.getElementById("articleRoot");
-const articleMedia = {
-  mountain: {
-    title: "Mountain journey",
-    video:
-      "https://videos.pexels.com/video-files/4441059/4441059-hd_1920_1080_25fps.mp4",
-    poster:
-      "https://images.pexels.com/videos/4441059/pexels-photo-4441059.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    credit: "a-view-of-the-mountains-and-trees-from-a-train-4441059",
-  },
-  beach: {
-    title: "Coastal travel inspiration",
-    video:
-      "https://videos.pexels.com/video-files/15455610/15455610-hd_1920_1080_30fps.mp4",
-    poster:
-      "https://images.pexels.com/videos/15455610/aerial-view-aqua-beach-beach-shack-15455610.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    credit: "drone-view-of-a-beach-resort-in-goa-india-15455610",
-  },
-  heritage: {
-    title: "Indian heritage from above",
-    video:
-      "https://videos.pexels.com/video-files/15952967/15952967-uhd_3840_2160_30fps.mp4",
-    poster:
-      "https://images.pexels.com/videos/15952967/4k-drone-jaigadh-jaipur-15952967.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    credit: "drone-footage-of-jaigarh-fort-in-jaipur-rajasthan-india-15952967",
-  },
-  nature: {
-    title: "Forest and waterfall inspiration",
-    video:
-      "https://videos.pexels.com/video-files/33322735/14189975_1920_1080_50fps.mp4",
-    poster:
-      "https://images.pexels.com/videos/33322735/beautiful-valley-beautiful-waterfall-cinematography-forest-greenery-33322735.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    credit: "serene-forest-waterfall-in-verdant-valley-33322735",
-  },
-};
 const photoGalleries = {
   mountain: [
     {
@@ -183,7 +149,6 @@ if (!destination) {
     '<div class="loading"><h2>Destination not found</h2><a class="text-link" href="index.html">Return to destinations →</a></div>';
 } else {
   const guide = destinationGuideDetails[destination.id];
-  const media = articleMedia[destination.category];
   const articlePhotos = [
     {
       src: destination.image.replace("w=900", "w=1200"),
@@ -224,6 +189,8 @@ if (!destination) {
     nextPhotoIndex += entries.length;
     return topics;
   };
+  const mapQuery = encodeURIComponent(`${destination.name}, ${destination.region}`);
+  const mapUrl = `https://www.google.com/maps?q=${mapQuery}`;
   document.title = `${destination.name} Travel Guide — Travel World`;
   root.innerHTML = `
     <section class="article-hero" style="background-image:url('${destination.image}')">
@@ -246,6 +213,31 @@ if (!destination) {
             <div><strong>Best season</strong><span>${destination.season}</span></div>
             <div><strong>Ideal for</strong><span>${destination.tip.replace(/^Best for /, "")}</span></div>
           </div>
+        </section>
+        <section class="destination-gallery" aria-label="${destination.name} photo gallery">
+          <span class="eyebrow dark">A GLIMPSE OF THE JOURNEY</span>
+          <h2>See ${destination.name}</h2>
+          <p class="section-intro">A few scenes to inspire your trip. Select a photo to view it full size.</p>
+          <div class="gallery-grid">
+            ${articlePhotos
+              .map(
+                (photo) => `
+                  <a class="gallery-photo" href="${photo.src}" target="_blank" rel="noopener noreferrer" aria-label="View ${photo.caption} full size">
+                    <img src="${photo.src}" alt="${photo.alt}" loading="lazy" decoding="async">
+                    <span class="gallery-caption"><strong>${photo.caption}</strong><small>Photo via ${photo.credit} ↗</small></span>
+                  </a>`,
+              )
+              .join("")}
+          </div>
+        </section>
+        <section class="destination-map" aria-label="Map of ${destination.name}">
+          <span class="eyebrow dark">FIND YOUR WAY</span>
+          <h2>Explore ${destination.name} on the map</h2>
+          <p class="section-intro">Get a feel for where the destination sits before you plan your route.</p>
+          <div class="map-frame">
+            <iframe src="${mapUrl}&output=embed" title="Map showing ${destination.name}, ${destination.region}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <a class="text-link map-link" href="${mapUrl}" target="_blank" rel="noopener noreferrer">Open ${destination.name} in Google Maps ↗</a>
         </section>
         <section class="guide-topics">
           <span class="eyebrow dark">THE ESSENTIALS</span>
@@ -314,4 +306,5 @@ if (!destination) {
         <p><small>*Indicative estimate only. Actual price depends on dates, group size, hotel category, transport, occupancy and availability. Flights, meals, tickets and activities are not included unless explicitly listed in the confirmed written quote.</small></p>
       </aside>
     </div>`;
+  window.initScrollAnimations?.(root);
 }
